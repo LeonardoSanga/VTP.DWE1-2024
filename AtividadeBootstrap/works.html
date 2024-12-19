@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King's Works</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+
+    <style>
+        /* CSS adicional mínimo */
+        .image-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #EDE9E4;
+            color: black;
+            padding: 10px;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container:hover .image-description {
+            transform: translateY(0);
+        }
+
+        .galleryRow {
+            margin-top: 1em;
+        }
+
+        .woeksGalleryTittle {
+            font-size: 50px;
+            letter-spacing: -3px;
+        }
+
+        .imageFullHeight {
+            height: 646.63px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <a class="navbar-brand fs-1" href="index.html">
+            <img src="Images/king5.png" alt="Logo de uma coroa" width="30" height="24" class="logo-large d-inline-block align-text-top">King of Horror
+        </a>
+        <ul class="nav nav-tabs justify-content-end">
+
+        
+            <li class="nav-item fs-1">
+                <a class="nav-link  text-dark" aria-current="page" href="index.html">Stephen King</a>
+            </li>
+            <li class="nav-item fs-1">
+                <a class="nav-link active text-dark" href="works.html">King's Works</a>
+            </li>
+            <li class="nav-item fs-1">
+                <a class="nav-link  text-dark" href="bookClubForm.html">Book Club</a>
+            </li>
+        </ul>
+    </nav>
+
+    
+
+        <div class="container py-5">
+
+            <h1 class="woeksGalleryTittle">Stephen King's Works</h1>
+            <div class="row g-4 galleryRow">
+                <!-- Imagem 1 -->
+                <div class="col-md-4">
+                    <div class="image-container">
+                        <img src="Images/worksGallery/semetary.jpg" class="img-fluid" alt="Imagem 1">
+                        <div class="image-description"><h5>Pet Sematary</h5><p>Stephen King’s #1 New York Times bestseller and “wild, powerful, disturbing” (The Washington Post Book World) classic about evil that exists far beyond the grave—now featuring a stunning vintage cover!</p></div>
+                    </div>
+                </div>
+                <!-- Imagem 2 -->
+                <div class="col-md-4 ">
+                    <div class="image-container ">
+                        <img src="Images/worksGallery/holly-pb.jpg" class="img-fluid imageFullHeight" alt="Imagem 2">
+                        <div class="image-description"><h5>Holly</h5><p>Holly Gibney, one of Stephen King’s most compelling and resourceful characters, returns in this chilling novel to solve the gruesome truth behind multiple disappearances in a midwestern town.</p></div>
+                    </div>
+                </div>
+                <!-- Imagem 3 -->
+                <div class="col-md-4">
+                    <div class="image-container">
+                        <img src="Images/worksGallery/christine.jpg" class="img-fluid" alt="Imagem 3">
+                        <div class="image-description"><h5>Christine</h5><p>#1 New York Times bestselling author and master storyteller Stephen King’s classic tale of an evil car that brings hellish terror to its new owner—now featuring a stunning vintage cover!</p></div>
+                    </div>
+                </div>         
+            </div>
+
+            <div class="row g-4 galleryRow">
+                <!-- Imagem 1 -->
+                <div class="col-md-4">
+                    <div class="image-container">
+                        <img src="Images/worksGallery/cujo.jpg" class="img-fluid" alt="Imagem 1">
+                        <div class="image-description"><h5>Cujo</h5><p>The classic tale of terror that “hits the jugular” (The New York Times) from #1 New York Times bestselling author and master storyteller Stephen King—now featuring a stunning vintage cover!</p></div>
+                    </div>
+                </div>
+                <!-- Imagem 2 -->
+                <div class="col-md-4">
+                    <div class="image-container">
+                        <img src="Images/worksGallery/salem2024.jpg" class="img-fluid imageFullHeight" alt="Imagem 2">
+                        <div class="image-description"><h5>Salem's Lot</h5><p>Author Ben Mears returns to his childhood home of Jerusalem’s Lot only to discover his hometown is being preyed upon by a bloodthirsty vampire. Written and directed by Gary Dauberman, and based on Stephen King‘s 1975 novel ‘Salem’s Lot, the film stars Lewis Pullman, Makenzie Leigh, Bill Camp, Pilou Asbæk, Alfre Woodard, and William Sadler.</p></div>
+                    </div>
+                </div>
+                <!-- Imagem 3 -->
+                <div class="col-md-4">
+                    <div class="image-container">
+                        <img src="Images/worksGallery/like-it-darker.jpg" class="img-fluid" alt="Imagem 3">
+                        <div class="image-description"><h5>You Like it Darker</h5><p>King’s ability to surprise, amaze, and bring us both terror and solace remains unsurpassed. Each of these stories holds its own thrills, joys, and mysteries; each feels iconic. You like it darker? You got it.</p></div>
+                    </div>
+                </div>           
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

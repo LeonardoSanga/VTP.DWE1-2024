@@ -1,0 +1,15 @@
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #818181;
+    border: 2px solid black; /* Borda preta */
+    padding: 5px;
+}
+
+td {
+    background-color: #ffffff; /* Cor de fundo do corpo (branco) */
+    border: 2px solid black; /* Borda preta */
+    padding:5px; /* Espaçamento interno nas células do corpo */
+}

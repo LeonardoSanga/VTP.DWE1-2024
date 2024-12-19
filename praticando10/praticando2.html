@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 2</title>
+
+    <style>
+        html {
+            background: rgb(2,0,36);
+            background: linear-gradient(121deg, rgba(2,0,36,1) 0%, rgba(30,121,9,1) 0%, rgba(0,212,255,1) 100%);
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+             align-items: center;
+             gap: 20px;
+             background-image: url("imagens/CSSBackGround.svg");
+             background-position-x: 95%;
+             background-position-y: 30%;
+             background-repeat: no-repeat;
+             height: 100vh;
+        }
+
+   
+
+        .itemImg {
+            width: 10vw;
+            height: 8vw;
+        }
+
+        .linhaObs {
+            display: flex;
+            align-items: end;
+        }
+
+        .linhaFavLang {
+            display: flex;
+            align-items: center;
+        }
+
+        .linhaFilmes {
+            display: flex;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 10px 30px;
+            border-radius: 10px;
+        }
+
+        #email {
+            color: rgb(104, 104, 104);
+        }
+        label {
+            font-size: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Praticando 2 - Formulário HTML Estilizados</h1>
+
+        <form action="">
+            <div class="container">
+            <div class="linha">
+                <label for="nome">Nome </label>
+                <input type="text" id="nome" name="nome" value="Leonardo"><br>
+            </div>
+            <div class="linha">
+                <label for="email">E-mail </label>
+                <input type="email" id="email" name="email" value="seu@email.aqui"><br>
+            </div>
+            <div class="linha">
+                <label for="marcaCarro">Marca de carro preferida </label>
+                <select name="marcaCarro" id="marcaCarro">
+                    <option value="chevrolet">Chevrolet</option>
+                    <option value="volvo">Volvo</option>
+                    <option value="audi">Audi</option>
+                    <option value="pegeout">Pegeout</option>
+                    <option value="mercedes">Mercedes</option>
+                </select><br>
+            </div>
+            <div class="linha linhaObs">
+                <label for="obs">Observações</label><br>
+                <textarea name="obs" id="obs" rows="6" cols="45"></textarea><br><br>
+            </div>
+            <div class="linha linhaFavLang">
+                <label for="favLang">Linguagem Web favorita </label>
+                
+                    <input type="radio" id="html" name="favLang" value="HTML">
+                    <label for="html"><img class="itemImg" src="imagens/html.png" alt=""></label>
+                    <input type="radio" id="css" name="favLang" value="CSS">
+                    <label for="css"><img class="itemImg" src="imagens/css.png" alt=""></label>
+                    <input type="radio" id="javascript" name="favLang" value="JavaScript">
+                    <label for="javascript"><img class="itemImg" src="imagens/javascript.png" alt=""></label><br><br>
+
+            </div>
+    
+            <div class="linha linhaFilmes">
+                <label for="favFilmes">Filmes que eu quero ver quando lançar: </label><br>
+                <div class="divSelectFilmes">
+                    <input type="checkbox" id="filme5" name="filme5" value="Auto da Compadecida 2">
+                    <label for="filme5">O Auto da Compadecida 2</label><br>
+                    <input type="checkbox" id="filme6" name="filme6" value="Avatar 3">
+                    <label for="filme6">Avatar 3: Fogo e Cinza</label><br>
+                    <input type="checkbox" id="filme1" name="filme1" value="Capitão América">
+                    <label for="filme1"><a href="">Capitão América: Admirável Mundo Novo</a></label><br>
+                    <input type="checkbox" id="filme2" name="filme2" value="Avengers">
+                    <label for="filme2"><a href="">Avengers: The Kang Dynasty</a></label><br>
+                    <input type="checkbox" id="filme3" name="filme3" value="Auto da Compadecida 2">
+                    <label for="filme3"><a href="">O Auto da Compadecida 2</a></label><br>
+                    <input type="checkbox" id="filme4" name="filme4" value="Avatar 3">
+                    <label for="filme4"><a href="">Avatar 3: Fogo e Cinza</a></label><br><br>
+                </div>
+            </div>
+
+            <div class="linha">
+                <input class="btn" type="submit" value="Enviar">
+                <input  class="btn" type="reset" value="Limpar">
+            </div>
+    
+        </div>
+        </form>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 1</title>
+
+    <style>
+        .btn {
+            background-color: rgb(202, 202, 202);
+            display: inline-block;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            border: 3px solid black;
+        }
+    </style>
+
+    
+</head>
+<body>
+    <h1>Praticando 1 - JavaScript</h1>
+
+    <h2 id="textoBemVindo">Seja Bem-Vindo <strong><span class="nomeUsuario"></span></strong></h2>
+
+    <div class="btn btnAdicionar"><p>Adicionar texto</p></div> <br>
+    <div class="btn btnRemover"><p>Remover texto</p></div>
+    <div class="btn btnRemoverTudo"><p>Remover texto</p></div>
+
+    <div class="container"></div>
+
+    <script>
+        window.onload = function() {
+            let nome = prompt("Qual o seu nome?");
+
+            let p = document.querySelector(".nomeUsuario");
+
+            p.innerHTML = nome;
+        }
+
+        document.querySelector(".btnAdicionar").onclick = function() {
+            let p = document.createElement("p");
+            
+            p.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, excepturi nisi consequatur impedit totam nemo labore eveniet possimus a suscipit earum, aspernatur accusamus enim. Laudantium labore soluta earum minus officia.";
+            
+            p.classList.add("pAdicionais");
+
+            document.querySelector(".container").appendChild(p);
+        }
+
+        document.querySelector(".btnRemover").onclick = function() {
+            let p = document.querySelector(".pAdicionais");
+
+            p.remove();
+        }
+
+        //document.querySelector(".btnRemoverTudo").onclick = function() {
+        //    let paragrafos = document.querySelectorAll(".pAdicionais");
+
+        //    paragrafos.forEach(function(p) {
+        //        p.remove(); 
+        //    });
+        //}
+
+        document.querySelector(".btnRemoverTudo").onclick = function() {
+            document.querySelector(".container").remove();
+        }
+    </script>
+
+</body>
+</html>

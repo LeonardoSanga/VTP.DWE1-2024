@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 2</title>
+
+    <style>
+        .col {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .btn {
+            color: white;
+            background-color: blue;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+
+    
+</head>
+<body>
+    <h1>Praticando 2 - JavaScript - Mini calculadora</h1>
+
+    <div class="col">
+        <label for="numero1" >Número 1</label><br>
+        <input type="number" id="numero1" name="numero1" class="operador">
+    </div>
+
+    <div class="col">
+        <label for="numero2">Número 2</label><br>
+        <input type="number" id="numero2" name="numero2" class="operador">
+    </div>
+
+    <div class="col">
+        <label for="resultado">Resultado</label><br>
+        <input type="number" id="resultado">
+    </div>
+
+    <div class="col">
+        <div class="btn btnSoma">Soma</div>
+    </div>
+
+    <div class="col">
+        <div class="btn btnSubtracao">Subtração</div>
+    </div>
+
+    <div class="col">
+        <div class="btn btnMultiplicacao">Multiplicação</div>
+    </div>
+
+    <div class="col">
+        <div class="btn btnDivisao">Divisão</div>
+    </div>
+
+    <script>
+        let btnSoma = document.querySelector(".btnSoma");
+        let btnSubtracao = document.querySelector(".btnSubtracao");
+        let btnMultiplicacao = document.querySelector(".btnMultiplicacao");
+        let btnDivisao = document.querySelector(".btnDivisao");
+
+        btnSoma.onclick = function() {
+            let resultado = document.querySelector("#resultado");
+            let operando1 = document.querySelector("#numero1");
+            let operando2 = document.querySelector("#numero2");
+
+            resultado.value = parseInt(operando1.value) + parseInt(operando2.value);
+        }
+
+        btnSubtracao.onclick = function() {
+            let resultado = document.querySelector("#resultado");
+            let operando1 = document.querySelector("#numero1");
+            let operando2 = document.querySelector("#numero2");
+
+            resultado.value = parseInt(operando1.value) - parseInt(operando2.value);
+        }
+
+        btnMultiplicacao.onclick = function() {
+            let resultado = document.querySelector("#resultado");
+            let operando1 = document.querySelector("#numero1");
+            let operando2 = document.querySelector("#numero2");
+
+            resultado.value = parseInt(operando1.value) * parseInt(operando2.value);
+        }
+
+        btnDivisao.onclick = function() {
+            let resultado = document.querySelector("#resultado");
+            let operando1 = document.querySelector("#numero1");
+            let operando2 = document.querySelector("#numero2");
+
+            resultado.value = parseInt(operando1.value) / parseInt(operando2.value);
+        }
+
+    </script>
+</body>
+</html>

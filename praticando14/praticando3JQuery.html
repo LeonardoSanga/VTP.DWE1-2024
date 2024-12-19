@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 3 JQuery</title>
+
+    <style>
+        .btn {
+            background-color: rgb(202, 202, 202);
+            display: inline-block;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Praticando 1 - JavaScript</h1>
+
+    <h2 id="textoBemVindo">Seja Bem-Vindo <strong><span class="nomeUsuario"></span></strong></h2>
+
+    <div class="btn btnAdicionar"><p>Adicionar texto</p></div> <br>
+    <div class="btn btnRemover"><p>Remover um</p></div>
+    <div class="btn btnRemoverTudo"><p>Remover todos</p></div>
+
+    <div class="container"></div>
+
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            let nome = prompt("Qual o seu nome?");
+
+            let p = $(".nomeUsuario");
+
+            p.html(nome);
+        });
+
+        $(".btnAdicionar").click(function() {
+            let p = $("<p>");
+            
+            p.html("Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, excepturi nisi consequatur impedit totam nemo labore eveniet possimus a suscipit earum, aspernatur accusamus enim. Laudantium labore soluta earum minus officia.");
+            
+            p.addClass("pAdicionais");
+
+            $(".container").append(p);
+        });
+            
+        $(".btnRemover").click(function() {
+            $(".pAdicionais").first().remove();
+        });
+
+        $(".btnRemoverTudo").click(function() {
+            $(".pAdicionais").remove();
+        });
+    </script>
+</body>
+</html>

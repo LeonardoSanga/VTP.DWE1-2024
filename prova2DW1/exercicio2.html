@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+   
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .content-area {
+            position: relative;
+            border: 2px solid black;
+            border-radius: 5px;
+            height: 300px;
+            margin: 0;
+            width: 50%;
+        }
+
+        .containerSelecionado {
+            background-color: #dff0d8;
+            border: 2px solid #3c763d;
+        }
+
+        .innerContainer {
+            position: absolute;
+            display: inline-block;
+            margin: 0;
+            width: 100%;
+        }
+
+        .pAdicionais {
+            display: inline-block;
+            margin: .5em;
+        }
+
+        .imgAdicionais {
+            width: 50px;
+            height: 50px;
+        }
+
+        .pImgADireita {
+            position: absolute; 
+            bottom: 0;                   
+        }
+
+        .containerGlobal {
+            display: flex;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Exercício 2</h1>
+        <div class="controls">
+            <div class="section">
+                <h2>Posição</h2>
+                <button class="btn btnInicio">Início</button>
+                <button class="btn btnFinal">Final</button>
+            </div>
+            <div class="section">
+                <h2>Palavra</h2>
+                <button class="btn btnAddP">Adicionar</button>
+                <button class="btn btnRemP">Remover</button>
+            </div>
+            <div class="section">
+                <h2>Imagens</h2>
+                <button class="btn btnAddImg">Adicionar</button>
+                <button class="btn btnRemImg">Remover</button>
+            </div>
+        </div>
+        <div class="containerGlobal">
+            <div class="content-area container1">
+                <div class="innerContainer"></div>
+            </div>
+    
+            <div class="content-area container2">
+                <div class="innerContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+    <script>
+
+        $('.container1').click(function() {
+            $('.container1').addClass('containerSelecionado');
+            $('.container1 > .innerContainer').addClass('innerContainerSelecionado');
+
+           $('.container2').removeClass('containerSelecionado');
+           $('.container2 > .innerContainer').removeClass('innerContainerSelecionado');
+        });
+
+        $('.container2').click(function() {
+            $('.container2').addClass('containerSelecionado');
+            $('.container2 > .innerContainer').addClass('innerContainerSelecionado');
+
+           $('.container1').removeClass('containerSelecionado');
+           $('.container1 > .innerContainer').removeClass('innerContainerSelecionado');
+        });
+
+        $('.btnAddP').click(function() {
+            let p = $("<p>");
+            p.text("Lorem ");
+            p.addClass("pAdicionais");
+            $('.innerContainerSelecionado').append(p)
+        });
+
+        $('.btnRemP').click(function() {
+            let paragrafos = $(".innerContainerSelecionado > .pAdicionais");
+            if(paragrafos.length > 0) {
+                 paragrafos.last().remove(); 
+            }
+        });
+
+        $('.btnAddImg').click(function() {
+            let img =  $("<img>")
+            img.attr("src", "Imagens/bola.png");
+            img.addClass('imgAdicionais');
+            $('.innerContainerSelecionado').append(img);
+        });
+
+        $('.btnRemImg').click(function() {
+            let img = $(".innerContainerSelecionado > .imgAdicionais").last();
+            img.remove();
+        });
+
+        $('.btnFinal').click(function() {
+            $(".innerContainerSelecionado").addClass('pImgADireita'); 
+        });
+
+        $('.btnInicio').click(function() {
+            $(".innerContainerSelecionado").removeClass('pImgADireita');
+        });
+        
+    </script>
+</body>
+</html>

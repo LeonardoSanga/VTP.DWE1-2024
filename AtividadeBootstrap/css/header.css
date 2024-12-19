@@ -1,0 +1,8 @@
+body {
+    background-image: url(../Images/bg-shade_5.png);
+}
+
+.logo-large {
+    width: auto; /* Ajusta automaticamente a largura */
+    height: 4rem; /* Define uma altura proporcional ao texto */
+}

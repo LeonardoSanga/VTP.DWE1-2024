@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 2 JQuery</title>
+
+    <style>
+        .titulo {
+            color: white;
+        }
+
+        body {
+            background-image: url(Imagens/lampada.png);
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: 15vh;
+            background-color: black;
+        }
+
+        .lampState {
+            display: inline-block;
+            margin-top: 60vh;
+            margin-left: 40vw;
+            font-size: 3em;
+            color: white;
+        }
+
+        .tituloAceso {
+            color: black;
+        } 
+
+        .lampAcesa {
+            color: black;
+        }
+
+        .bodyAceso {
+            background-image: url(Imagens/lampada-acesa.png);
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Praticando 2 - Lâmpada</h1>
+
+    <h2 class="lampState">Lâmpada apagada</h2>
+
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <script>
+        const btnAcender = $(".lampState");
+
+        btnAcender.mouseover(function(){
+            $(".titulo").toggleClass('tituloAceso');
+            $(".lampState").toggleClass('lampAcesa');
+            $("body").toggleClass('bodyAceso');
+        });
+
+    </script>
+</body>
+</html>

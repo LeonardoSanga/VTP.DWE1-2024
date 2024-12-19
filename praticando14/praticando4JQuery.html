@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 4 JQuery</title>
+
+    <style>
+        body {
+            padding: 0 20px;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .retangulo {
+            width: 20vw;
+            height: 5vw;
+            border: 4px solid black;
+        }
+
+        .vermelho {
+            background-color: red;
+        }
+
+        .verde {
+            background-color: green;
+        }
+
+        .azul {
+            background-color: blue;
+        }
+
+        .amarelo {
+            background-color: yellow;
+        }
+
+        .rosa {
+            background-color: rgb(248, 8, 248);
+        }
+
+        .btnReset {
+            margin-top: 20px;
+            display: inline-block;
+            border: 2px solid black;
+            padding: 0px 2em;
+            background-color: rgb(190, 190, 190);
+        }
+
+        .btnReset p {
+            font-weight: bold;
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .backgroundColorPreview {
+            margin-top: 20vh;
+        }
+
+        .backgroundColorPreview p {
+            font-size: 5em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Praticando 3 - JavaScript - Cores (click e mouse)</h1>
+
+    <div class="container">
+        <div class="retangulo vermelho"></div>
+        <div class="retangulo verde"></div>
+        <div class="retangulo azul"></div>
+        <div class="retangulo amarelo"></div>
+        <div class="retangulo rosa"></div>
+    </div>
+
+    <div class="btnReset">
+        <p>Reset</p>
+    </div>
+
+    <div class="backgroundColorPreview"><p></p></div>
+
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <script>
+        let botoesCores = $(".retangulo");
+        let colorDefined = "white";
+
+        botoesCores.each(function() {
+            $(this).mouseover(function() {
+                let body = $("body");
+
+                $(".backgroundColorPreview p").html("Preview");
+
+                if($(this).hasClass("vermelho")) {
+                    body.css({"background-color": "red"});
+                } else if($(this).hasClass("verde")) {
+                    body.css({"background-color": "green"});
+                } else if($(this).hasClass("azul")) {
+                    body.css({"background-color": "blue"});
+                } else if($(this).hasClass("amarelo")) {
+                    body.css({"background-color": "yellow"});
+                } else if($(this).hasClass("rosa")) {
+                    body.css({"background-color": "rgb(248, 8, 248)"});
+                } 
+
+                if (body.css("background-color") === colorDefined) {
+                    $(".backgroundColorPreview p").html("");
+                }
+            });
+        });
+            
+
+        botoesCores.each(function() { 
+            $(this).mouseout(function() {
+                $("body").css({"backgroundColor": colorDefined});
+
+                $(".backgroundColorPreview p").html(""); 
+            });          
+        });
+
+        botoesCores.each(function() { 
+            $(this).click(function() {
+                //let body = document.querySelector("Body");
+
+                $(".backgroundColorPreview p").html("");
+
+                if($(this).hasClass("vermelho")) {
+                    colorDefined = "red";
+                } else if($(this).hasClass("verde")) {
+                    colorDefined = "green";
+                } else if($(this).hasClass("azul")) {
+                    colorDefined = "blue";
+                } else if($(this).hasClass("amarelo")) {
+                    colorDefined = "yellow";
+                } else if($(this).hasClass("rosa")) {
+                    colorDefined = "rgb(248, 8, 248)";
+                } 
+            });
+        });
+            
+
+        $(".btnReset").click(function() {
+            colorDefined = "white";
+            $("body").css({"backgroundColor": colorDefined});
+        });
+
+    </script>
+</body>
+</html>

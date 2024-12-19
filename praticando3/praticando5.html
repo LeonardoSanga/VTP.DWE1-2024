@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela e Plano de Fundo</title>
+
+    <style>
+        body {
+            background-color: rgb(187, 187, 255);
+        }
+
+        .tabela {
+            width: 500px;
+            height: 300px;
+        }
+
+        table, td {
+            border: 1px solid red;
+        }
+
+        .tabela tr:nth-child(3) {
+            background-color: blue;
+            
+        }
+
+        .tabela tr:nth-child(4) {
+            background-color: yellow;
+            
+        }
+
+        caption {
+            text-align: center;
+        }
+
+        .greenCol {
+            background-color: green;
+
+        }
+
+        .redCol {
+            background-color: red;
+        }
+
+        .blueCol {
+            background-color: blue;
+        }
+
+        .yellowCol {
+            background-color: yellow;
+        }
+
+        .legenda tr {
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Praticando 5 - Tabela grande com Colspan e Rowspan e Plano de Fundo</h1>
+
+    <p><a href="index.html">Menu Principal</a></p>
+
+    <table class="tabela">
+       <caption>Tabela grande com colspan e rowspan</caption>
+        <tr>
+            <td colspan="2"  class="greenCol">Colspan</td>
+            <td  class="greenCol">-</td>
+            <td rowspan="3"  class="greenCol">Rowspan</td>
+        </tr>
+
+        <tr>
+            <td class="redCol">-</td>
+            <td class="redCol">-</td>
+            <td class="redCol">-</td>
+        </tr>
+
+        <tr>
+            <td class="blueCol">-</td>
+            <td class="blueCol" colspan="2">Colspan</td>
+        </tr>
+
+        <tr>
+            <td class="yellowCol">-</td>
+            <td class="yellowCol">-</td>
+            <td class="yellowCol">-</td>
+            <td class="yellowCol"></td>
+        </tr>
+    </table>
+
+    <p></p>
+
+    <table class="legenda">
+        <caption>Legenda</caption>
+
+        <tr>
+            <td>&nbsp;Linha 1&nbsp;</td>
+            <td class="greenCol">&nbsp;-------&nbsp;</td>
+            <td>&nbsp;green&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td>&nbsp;Linha 2&nbsp;</td>
+            <td class="redCol">&nbsp;  -------  &nbsp;</td>
+            <td>&nbsp;red&nbsp;</td>
+        </tr>
+
+
+        <tr>
+            <td>&nbsp;Linha 3&nbsp;</td>
+            <td  class="blueCol">&nbsp;  -------  &nbsp;</td>
+            <td>&nbsp;blue&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td>&nbsp;Linha 4&nbsp;</td>
+            <td class="yellowCol">&nbsp;  ------- &nbsp; </td>
+            <td>&nbsp;yellow&nbsp;</td>
+        </tr>
+    </table>
+</body>
+</html>
